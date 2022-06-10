@@ -4,9 +4,13 @@ from django.http import HttpResponse
 
 # Create your views here.
 def myHomeView(request,*args, **kwargs):
+    myContext = {
+        'myText' : 'Esto es sobre nosotros',
+        'myNumber' : 123,
+    }
     print(args, kwargs)
     print(request.user)
-    return render(request, "home.html",{})
+    return render(request, "home.html", myContext)
 
 def anotherView(request):
     print(request.user)
