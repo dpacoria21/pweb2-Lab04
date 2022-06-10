@@ -8,3 +8,4 @@ class Persona(models.Model):
     apellidos = models.CharField(max_length = 100)
     edad = models.IntegerField()
     donador = models.BooleanField()
+    utilizarNull = models.BooleanField(default=False)
