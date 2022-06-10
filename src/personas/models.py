@@ -9,3 +9,5 @@ class Persona(models.Model):
     edad = models.IntegerField()
     donador = models.BooleanField()
     utilizarNull = models.BooleanField(default=False)
+    utilizarNull2 = models.BooleanField(null=True)
+    utilizarBlank = models.BooleanField(blank=True)
