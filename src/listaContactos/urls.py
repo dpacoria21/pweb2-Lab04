@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from inicio.views import myHomeView
 from inicio.views import anotherView
+from inicio.views import mipageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', myHomeView, name='Pagina de Inicio'),
     path('another/', anotherView, name='Otra pagina'),
+    path('miPagina/', mipageView, name='Uso de tags'),
 ]

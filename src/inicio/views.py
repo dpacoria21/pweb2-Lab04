@@ -1,3 +1,4 @@
+from urllib.request import HTTPHandler
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -10,3 +11,6 @@ def myHomeView(request,*args, **kwargs):
 def anotherView(request):
     print(request.user)
     return HttpResponse('<h1>Solo otra pagina</h1>')
+
+def mipageView(request,*args, **kwargs):
+    return render(request, "tags.html",{})
