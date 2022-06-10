@@ -12,5 +12,8 @@ def anotherView(request):
     print(request.user)
     return HttpResponse('<h1>Solo otra pagina</h1>')
 
+def baseView(request, *args, **kwargs):
+    return render(request, "base.html",{})
+
 def mipageView(request,*args, **kwargs):
     return render(request, "tags.html",{})
