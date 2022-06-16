@@ -15,6 +15,9 @@
         <ul>
             {% for myItem in myList %}
                 <li>{{ forloop.counter }} - {{ myItem }}
+                {% ifchanged myItem %}
+                    <li> -Se ha cambiado el valor</li>
+                {% endifchanged %}
                 {% if myItem == 33 %}
                     -Este numero es magico
                 {% elif myItem > 50 %}
