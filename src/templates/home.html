@@ -14,16 +14,11 @@
         <li>{{ forloop.parentloop }} - {{ myItem }}</li>
         <ul>
             {% for myItem in myList %}
-                <li>{{ forloop.counter }} - {{ myItem }}
-                {% ifchanged myItem %}
+                {% for myLeter in mySecondList %}
+                    {% ifchanged myItem%}
                     <li> -Se ha cambiado el valor</li>
-                {% endifchanged %}
-                {% if myItem == 33 %}
-                    -Este numero es magico
-                {% elif myItem > 50 %}
-                    -este numero es mayor que 50
-                {% endif %}
-                </li>
+                    {% endifchanged %}
+                {% endfor %}
             {% endfor %}
         </ul>
         {{ request.user }}
